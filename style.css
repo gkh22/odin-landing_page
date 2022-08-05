@@ -3,12 +3,12 @@ body {
     margin: 0;
     display: flex;
     flex-flow: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .header, .testimonial, .pictures, .footer, .top_h, .bottom_h,
-.left-bot, .right-bot, .title, .info, .quote, .quoter,
-.AD, .container, .left, .right, .footer {
+.left-bot, .right-bot, .quote, .quoter,
+.AD, .left, .right, .footer {
     display: flex;
 }
 
@@ -39,7 +39,6 @@ body {
 .top_h .logo {
     font-size: 24px;
     color: #F9FaF8;
-    font-weight: 800;
 }
 
 .left-bot {
@@ -59,7 +58,7 @@ h1 {
 
 .bottom_h {
     gap: 48px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     flex-flow: row wrap;
 }
 
@@ -87,6 +86,38 @@ h1 {
     padding: 8px 10px;
     width: 125px;
 }
+
+.pictures {
+    text-align: center;
+    flex-flow: column;
+}
+
+/* temporary */
+.pictures img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #3882F6;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.info {
+    width: 200px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 930;
+    color: #1F2937;
+    margin: 30px;
+}
+
 
 
 
