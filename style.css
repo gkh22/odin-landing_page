@@ -1,0 +1,96 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header, .testimonial, .pictures, .footer, .top_h, .bottom_h,
+.left-bot, .right-bot, .title, .info, .quote, .quoter,
+.AD, .container, .left, .right, .footer {
+    display: flex;
+}
+
+.top_h ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    gap: 16px;
+    font-size: 18px;
+    color: #E5E7EB;
+    font-weight: 100;
+}
+
+.header {
+    background-color: #1F2937;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.top_h {
+    width: 830px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    padding-top: 15px;
+}
+
+.top_h .logo {
+    font-size: 24px;
+    color: #F9FaF8;
+    font-weight: 800;
+}
+
+.left-bot {
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+}
+
+.left-bot p {
+    margin: 0;
+    color: #E5E7EB;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.bottom_h {
+    gap: 48px;
+    margin-bottom: 100px;
+    flex-flow: row wrap;
+}
+
+.bottom_h .left-bot {
+    width: 500px;
+    height: auto;
+}
+
+.left-bot h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #F9FAF8;
+}
+
+.left-bot button {
+    background-color: #3882F6;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 550;
+    border-radius: 10px;
+    padding: 8px 10px;
+    width: 125px;
+}
+
+
+
+
+
+
+
