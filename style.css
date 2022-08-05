@@ -99,7 +99,7 @@ h1 {
     border: 5px solid #3882F6;
 }
 
-.container {
+.pictures .container {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
@@ -118,9 +118,30 @@ h1 {
     margin: 30px;
 }
 
+.testimonial {
+    background-color: #E5E7EB;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
 
+.test-inner {
+    width: 800px;
+}
 
+.quote {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
 
+.quoter {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22px;
+    font-weight: 700;
+}
 
 
 
