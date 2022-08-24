@@ -3,6 +3,13 @@
     font-family: Cubano;
 }
 
+#page1 {
+    display: block;
+}
+
+#page2 {
+    display: none;
+}
 body {
     height: 100vh;
     margin: 0;
@@ -25,8 +32,6 @@ body {
     gap: 32px;
     font-size: 30px;
     font-weight: 100;
-    margin-bottom: 100px;
-    padding: 10px;
 }
 
 .header {
@@ -40,7 +45,7 @@ body {
 
 .header li {
     position: relative;
-    color: black;
+    color: #8b0000;
     margin: 0;
     padding: 0;
 }
@@ -54,11 +59,21 @@ body {
     margin-bottom: 100px;
     justify-content: center;
     align-items: center;
+    background-color: rgba(203, 195, 227, .4);
+    padding: 15px;
+    border: 2px solid #000000;
+    justify-content: space-between;
+    width: 100vw;
+    gap: 15px;
 }
+
+.logo img {
+    width: 50px;
+}
+
 
 .two a {
     font-size: 0;
-    height: 100px;
 }
 
 .two a::after {
@@ -73,6 +88,7 @@ to-do: make animation, hover link embrace the bagel grows bigger
 */
     font-size: 40px;
     content: "EMBRACE THE BAGEL";
+    color: #000000;
     text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
     -.025em -.05em 0 rgba(0, 255, 0, 0.75), 
     0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
@@ -115,13 +131,18 @@ h1, p {
     align-items: center;
     border: 2px solid #000000;
     border-radius: 10px;
-    background-color: rgba(211, 211, 211, .4);
+    background-color: rgba(203, 195, 227, .4);
     padding: 50px 20px;
 }
 
 .bottom_h .left-bot {
     width: 500px;
     height: auto;
+}
+
+.left-bot {
+    justify-content: center;
+    align-items: center;
 }
 
 .left-bot h1 {
@@ -144,14 +165,14 @@ h1, p {
     width: 200px;
 }
 
-button::after {
+.left-bot button::after {
     font-size: 18px;
     content: "Join the fight?";
     transition-duration: 2s;
     
 }
 
-button:hover::after {
+.left-bot button:hover::after {
     width: 250px;
     height: auto;
     font-size: 25px;
@@ -166,13 +187,33 @@ button:hover::after {
 .pictures {
     text-align: center;
     flex-flow: column;
+    background-color: rgba(139, 0, 0);
+}
+
+.title {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+
+    margin: 30px;
 }
 
 /* temporary */
-.pictures img {
-    width: 150px;
-    height: 150px;
-    border: 5px solid #3882F6;
+.container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    transition-duration: 2s;
+}
+
+.container img:hover {
+    width: 100%;
+    height: 200px;
+    border: 5px solid green;
 }
 
 .pictures .container {
@@ -180,19 +221,33 @@ button:hover::after {
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
+    align-items: center;
     margin-bottom: 80px;
 }
 
-.info {
+.info1, .info2, .info3, .info4 {
     width: 200px;
 }
 
-.title {
-    font-size: 36px;
-    font-weight: 930;
-    color: #1F2937;
-    margin: 30px;
+.text, .title {
+    color: #CBC3E3;
 }
+
+/*
+
+.title .button {
+    display: flex;
+    font-size: 15px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: red;
+    animation: links 500ms infinite;
+    top: 0;
+    left: 0;
+}
+
+*/
 
 .testimonial {
     background-color: #E5E7EB;
