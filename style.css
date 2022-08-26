@@ -18,13 +18,13 @@ body {
     font-family: "Cubano", "Roboto", sans-serif;
 }
 
-.header, .testimonial, .pictures, .footer, .top_h, .bottom_h,
-.left-bot, .right-bot, .quote, .quoter,
+.header, .j_header, .testimonial, .pictures, .footer, .top_h, .top_hj, .bottom_h, .j_bottom_h,
+.left-bot, .j-left-bot, .right-bot, .quote, .quoter,
 .AD, .left, .right, .footer {
     display: flex;
 }
 
-.top_h ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0; 
@@ -34,8 +34,7 @@ body {
     font-weight: 100;
 }
 
-.header {
-    background-image: url("images/header.jpg");
+.j_header, .header {
     flex-flow: row wrap;
     background-attachment: fixed;
     background-position: center;
@@ -43,49 +42,81 @@ body {
     align-items: center;
 }
 
-.header li {
+.header {
+    background-image: url("./images/header.jpg");
+}
+
+.j_header {
+    background-image: url("./images/bagel.gif");
+    background-size: 100%;
+}
+
+li {
     position: relative;
-    color: #8b0000;
     margin: 0;
     padding: 0;
 }
 
-.header a {
+.header li {
+    color: #8b0000;
+}
+
+a {
     text-decoration: none;
     color: inherit;
 }
 
-.top_h {
+.top_hj, .top_h {
     margin-bottom: 100px;
-    justify-content: center;
     align-items: center;
-    background-color: rgba(203, 195, 227, .4);
     padding: 15px;
-    border: 2px solid #000000;
     justify-content: space-between;
     width: 100vw;
     gap: 15px;
+    border: 2px solid #000000;
+}
+
+.top_h {
+    background-color: rgba(203,195,227,.4);
+}
+
+.top_hj {
+    background-color: rgba(35, 31, 32, .8);;
 }
 
 .logo img {
     width: 50px;
 }
 
+.glitch, .bother {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -.025em -.05em 0 rgba(0, 255, 0, 0.75), 
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    animation: links 1000ms infinite;
+}
+
+.even {
+    font-size: 35px;
+}
+
+.bother {
+    font-size: 40px;
+}
 
 .two a {
     font-size: 0;
 }
 
 .two a::after {
-    content: "JOIN THE FIGHT";
     font-size: 30px;
     transition-duration: 2s;
 }
 
+.two a::after {
+    content: "JOIN THE FIGHT";
+}
+
 .two a:hover::after {
-/*
-to-do: make animation, hover link embrace the bagel grows bigger
-*/
     font-size: 40px;
     content: "EMBRACE THE BAGEL";
     color: #000000;
@@ -95,35 +126,41 @@ to-do: make animation, hover link embrace the bagel grows bigger
     animation: links 1000ms infinite;
 }
 
-.one span, .two span, .three span {
+
+/* 
+make sure to make .bother three layered span
+*/
+
+.one span, .two span, .three span, .bother span {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.two span:first-child {
+.two span:first-child, .bother span:first-child {
     animation: links 450ms infinite;
 }
 
-.two span:last-child {
+.two span:last-child, .bother span:last-child {
     animation: links 600ms infinite;
 }
 
-.left-bot {
+.left-bot, .j-left-bot {
     flex-direction: column;
 }
 
-h1, p {
+.para {
     margin: 0;
-}
-
-.left-bot p {
     color: #E5E7EB;
     font-weight: 100;
     margin-bottom: 10px;
 }
 
-.bottom_h {
+.j-left-bot .para { 
+    color: #000000;
+}
+
+.bottom_h, .j_bottom_h {
     gap: 48px;
     margin-bottom: 250px;
     flex-flow: row wrap;
@@ -131,27 +168,33 @@ h1, p {
     align-items: center;
     border: 2px solid #000000;
     border-radius: 10px;
-    background-color: rgba(203, 195, 227, .4);
     padding: 50px 20px;
 }
 
-.bottom_h .left-bot {
-    width: 500px;
-    height: auto;
+.bottom_h {
+    background-color: rgba(203, 195, 227, .4);
 }
 
-.left-bot {
+.j_bottom_h {
+    background-color: rgba(35, 31, 32, .8);
+}
+
+/*
+see if can remove excess top space from jobu bottom-header
+*/
+.left-bot, .j-left-bot {
+    width: 500px;
     justify-content: center;
     align-items: center;
 }
 
-.left-bot h1 {
+.everything {
     font-size: 48px;
     font-weight: 800;
     color: black;
 }
 
-.left-bot button {
+.left-bot button, .j-left-bot button {
     background-color: #000000;
     border: none;
     display: flex;
@@ -165,23 +208,51 @@ h1, p {
     width: 200px;
 }
 
-.left-bot button::after {
-    font-size: 18px;
-    content: "Join the fight?";
+.left-bot button::after, .j-left-bot button::after {
     transition-duration: 2s;
-    
 }
 
-.left-bot button:hover::after {
-    width: 250px;
-    height: auto;
-    font-size: 25px;
-    content: "Bagel?";
+.left-bot button::after {
+    font-size: 18px;
+}
+
+.j-left-bot button::after {
+    font-size: 30px;   
     animation: links 500ms infinite;
 }
 
-.right-bot {
+.left-bot button::after {
+    content: "Join the fight?";
+}
+
+.j-left-bot button::after {
+    content: "?";
+}
+
+.left-bot button:hover::after, .j-left-bot button:hover::after {
+    width: 250px;
+    height: auto;
+}
+
+.left-bot button:hover::after {
+    font-size: 25px;
+    animation: links 500ms infinite;
+    content: "Bagel?";
+}
+
+.j-left-bot button:hover::after {
+    font-size: 25px;
+    animation: none;
+    text-shadow: none;
+    content: "Be Kind";
+}
+
+.right-bot, .j-right-bot {
     opacity: .9;
+}
+
+.j-right-bot img {
+   width: 300px;
 }
 
 .pictures {
