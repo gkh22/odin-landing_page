@@ -34,7 +34,7 @@ ul {
     font-weight: 100;
 }
 
-.j_header, .header, .testimonial {
+.j_header, .header, .testimonial, .j_testimonial {
     flex-flow: row wrap;
     background-attachment: fixed;
     background-position: center;
@@ -312,7 +312,7 @@ see if can remove excess top space from jobu bottom-header
 .bagels .hole2 {
     position: absolute;
     top: 60px;
-    left: 65px;  
+    left: 60px;  
     opacity: 0%;
     transition-duration: 2s;
     color: #231F20;
@@ -355,34 +355,50 @@ see if can remove excess top space from jobu bottom-header
     color: #000000;
 }
 
-.testimonial {
+.testimonial, .j_testimonial {
     display: flex;
-    background-image: url("./images/quoteback.gif");
     background-size: 100%;
     justify-content: center;
     align-items: center;
     padding: 100px;
 }
 
-.test-inner {
+.testimonial {
+    background-image: url("./images/quoteback.gif");
+}
+
+.j_testimonial {
+    background-image: url("./images/walkthrough.gif");
+    padding: 150px 100px;
+}
+
+.test-inner, .j-test-inner {
     width: 800px;
 }
 
-.quote, .quoter {
+.quote, .quoter, .j_quote {
     font-size: 30px;
     font-style: italic;
+}
+
+.quote, .quoter {
     color: #ffffff;
 }
 
-.quote {
-    font-size: 30px;
-    font-style: italic;
-    color: #ffffff;
+.j_quote, .j_quoter:after {
+    color: #000000;
+}
+
+.quote, .j_quote {
     opacity: .8;
     margin-bottom: 10px;
 }
 
-.quoter {
+.j_quoter {
+    font-size: 0;
+}
+
+.quoter, .j_quoter:after {
     display: flex;
     justify-content: flex-end;
     font-size: 22px;
@@ -391,9 +407,20 @@ see if can remove excess top space from jobu bottom-header
     transition-duration: 1s;
 }
 
-.quoter:hover {
+.j_quoter:after {
+    content: "- Jobu Tupaki";
+    animation: links 500ms infinite;
+}
+
+.quoter:hover, .j_quoter:hover::after {
     font-size: 24px;
     opacity: 100%;
+}
+
+.j_quoter:hover::after {
+    content: "- Joy Wang";
+    color: #ffffff;
+    animation: none; 
 }
 
 .AD {
