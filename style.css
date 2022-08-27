@@ -34,7 +34,7 @@ ul {
     font-weight: 100;
 }
 
-.j_header, .header {
+.j_header, .header, .testimonial {
     flex-flow: row wrap;
     background-attachment: fixed;
     background-position: center;
@@ -329,9 +329,9 @@ see if can remove excess top space from jobu bottom-header
     width: 90px;
     height: 90px;
     opacity: 100%;
-    top: 50px;
-    left: 57px;
-    border: 3px solid #000000;
+    top: 50px;    
+    justify-content: center;
+    align-items: center;
 }
 
 .container, .j_container {
@@ -355,38 +355,31 @@ see if can remove excess top space from jobu bottom-header
     color: #000000;
 }
 
-/*
-
-.title .button {
-    display: flex;
-    font-size: 15px;
-    border: 2px solid #000000;
-    border-radius: 50%;
-    padding: 5px;
-    background-color: red;
-    animation: links 500ms infinite;
-    top: 0;
-    left: 0;
-}
-
-*/
-
 .testimonial {
-    background-color: #E5E7EB;
-    padding: 100px;
+    display: flex;
+    background-image: url("./images/quoteback.gif");
+    background-size: 100%;
     justify-content: center;
     align-items: center;
+    padding: 100px;
 }
 
 .test-inner {
     width: 800px;
 }
 
-.quote {
-    font-size: 36px;
+.quote, .quoter {
+    font-size: 30px;
     font-style: italic;
-    color: #1F2937;
-    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.quote {
+    font-size: 30px;
+    font-style: italic;
+    color: #ffffff;
+    opacity: .8;
+    margin-bottom: 10px;
 }
 
 .quoter {
@@ -394,6 +387,13 @@ see if can remove excess top space from jobu bottom-header
     justify-content: flex-end;
     font-size: 22px;
     font-weight: 700;
+    opacity: .9;
+    transition-duration: 1s;
+}
+
+.quoter:hover {
+    font-size: 24px;
+    opacity: 100%;
 }
 
 .AD {
