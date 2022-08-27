@@ -1,5 +1,5 @@
 @font-face {
-    src: url("./fonts/Cubano.ttf");
+    src: url("../fonts/Cubano.ttf");
     font-family: Cubano;
 }
 
@@ -43,11 +43,11 @@ ul {
 }
 
 .header {
-    background-image: url("./images/header.jpg");
+    background-image: url("../images/header.jpg");
 }
 
 .j_header {
-    background-image: url("./images/bagel.gif");
+    background-image: url("../images/bagel.gif");
     background-size: 100%;
 }
 
@@ -364,11 +364,11 @@ see if can remove excess top space from jobu bottom-header
 }
 
 .testimonial {
-    background-image: url("./images/quoteback.gif");
+    background-image: url("../images/quoteback.gif");
 }
 
 .j_testimonial {
-    background-image: url("./images/walkthrough.gif");
+    background-image: url("../images/walkthrough.gif");
     padding: 150px 100px;
 }
 
@@ -424,47 +424,80 @@ see if can remove excess top space from jobu bottom-header
 }
 
 .AD {
-    padding: 100px 150px;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/perhaps.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
 }
 
-.AD .container {
+.ad_container {
     display: flex;
-    flex-flow: row wrap;
-    background-color: #3882F6;
-    padding: 50px 100px;
-    border-radius: 10px;
     justify-content: space-between;
-    width: 1000px;
+    align-items: center;
+    flex-flow: row wrap;
+    background-color: rgba(203,195,227,.4);
+    border-radius: 10px;
+    width: 800px;
+    padding: 50px;
+    margin: 100px;
+    gap: 10px;
 }
 
 .left {
-    display: flex;
     flex-flow: column wrap;
-    color: white;
+    width: 500px;
 }
 
-.left h2 {
+.left h2, .left p {
     margin: 0;
+    padding: 0;
 }
 
-.left p {
-    margin: 0;
+.CtoA {
+    font-size: 28px;
+    margin-bottom: 5px;
 }
 
-.right button {
-    background-color: inherit;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    font-size: 18px;
+.signup {
     color: #ffffff;
-    font-weight: 700;
-    padding: 0px 25px;
+    font-size: 20px;
+}
+
+.verse {
+    color: #ffffff;
+    transition-duration: 2s;
+    animation: verse 1000ms infinite;
+}
+
+.verse:hover {
+    color: #8bc34a;
+    animation: none;
+}
+
+.finetext {
+    font-size: 10px;
+}
+
+.jump {
+    background-color: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: inherit;
+    width: 100px;
+    padding: 5px 10px;
+    transition-duration: 2s;
+}
+
+.jump:hover {
+    font-size: 22px;
+    color: #8bc34a;
 }
 
 .footer {
-    background-color: #1F2937;
+    background-color: #8b0000;
     color: white;
     justify-content: center;
     align-items: center;
@@ -515,3 +548,28 @@ see if can remove excess top space from jobu bottom-header
      }
 }
 
+@keyframes verse {
+    0% {
+        color: #ffffff;
+        transition-duration: .5s;
+    }
+
+    25% {
+        color: #9ccc65;
+        transition-duration: .5s;
+    }
+
+    50% {
+        color: #8bc34a;
+        transition-duration: .5s;
+    }
+
+    75% {
+        color: #9ccc65;
+        transition-duration: .5s;
+    }
+
+    100% {
+        color: #ffffff;
+    }
+}
