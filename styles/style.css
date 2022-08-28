@@ -20,7 +20,7 @@ body {
 
 .header, .j_header, .testimonial, .pictures, .j_pictures, .footer, 
 .top_h, .top_hj, .bottom_h, .j_bottom_h, .left-bot, .j-left-bot, .right-bot, .quote, .quoter,
-.AD, .left, .right, .footer {
+.AD, .left, .right, .footer, .j_footer {
     display: flex;
 }
 
@@ -81,7 +81,7 @@ a {
 }
 
 .top_hj {
-    background-color: rgba(35, 31, 32, .8);;
+    background-color: rgba(35, 31, 32, .8);
 }
 
 .logo img {
@@ -418,26 +418,35 @@ see if can remove excess top space from jobu bottom-header
 }
 
 .j_quoter:hover::after {
+    font-size: 20px;
     content: "- Joy Wang";
     color: #ffffff;
     animation: none; 
 }
 
-.AD {
+.AD, .j_AD {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/perhaps.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
 }
 
-.ad_container {
+.AD {
+    background-image: url("../images/perhaps.jpg");
+} 
+
+.j_AD {
+    background-image: url("../images/bagel.gif");
+}
+
+
+.ad_container, .j_ad_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: row wrap;
-    background-color: rgba(203,195,227,.4);
     border-radius: 10px;
     width: 800px;
     padding: 50px;
@@ -445,24 +454,37 @@ see if can remove excess top space from jobu bottom-header
     gap: 10px;
 }
 
-.left {
+.ad_container {
+    background-color: rgba(203,195,227,.4);
+}
+
+.j_ad_container {
+    background-color: rgba(35, 31, 32, .8);
+}
+
+.left, .j_left {
     flex-flow: column wrap;
     width: 500px;
 }
 
-.left h2, .left p {
+.left h2, .left p, .j_left h2, .j_left p {
     margin: 0;
     padding: 0;
 }
 
-.CtoA {
+.CtoA, .j_CtoA {
     font-size: 28px;
     margin-bottom: 5px;
 }
 
-.signup {
+.signup, .j_signup {
     color: #ffffff;
     font-size: 20px;
+}
+
+.j_signup {
+    color: #ffffff;
+    opacity: .8;
 }
 
 .verse {
@@ -476,11 +498,11 @@ see if can remove excess top space from jobu bottom-header
     animation: none;
 }
 
-.finetext {
+.finetext, .j_finetext {
     font-size: 10px;
 }
 
-.jump {
+.jump, .ex {
     background-color: #000000;
     border-radius: 5px;
     color: #ffffff;
@@ -496,12 +518,20 @@ see if can remove excess top space from jobu bottom-header
     color: #8bc34a;
 }
 
-.footer {
-    background-color: #8b0000;
-    color: white;
+.footer, .j_footer {
     justify-content: center;
     align-items: center;
     padding: 50px;
+}
+
+.footer {
+    background-color: #8b0000;
+    color: #ffffff;
+}
+
+.j_footer {
+    background-color: #231F20;
+    color: #000000;
 }
 
 @keyframes links {
