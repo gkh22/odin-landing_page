@@ -18,7 +18,7 @@ body {
     font-family: "Cubano", "Roboto", sans-serif;
 }
 
-.header, .j_header, .testimonial, .pictures, .j_pictures, .footer, 
+.header, .j_header, .testimonial, .j_testimonial, .pictures, .j_pictures, .footer, 
 .top_h, .top_hj, .bottom_h, .j_bottom_h, .left-bot, .j-left-bot, .right-bot, .quote, .quoter,
 .AD, .left, .right, .footer, .j_footer {
     display: flex;
@@ -214,36 +214,28 @@ see if can remove excess top space from jobu bottom-header
 
 .left-bot button::after {
     font-size: 18px;
+    content: "Join the fight?";
 }
 
 .j-left-bot button::after {
     font-size: 30px;   
     animation: links 500ms infinite;
-}
-
-.left-bot button::after {
-    content: "Join the fight?";
-}
-
-.j-left-bot button::after {
     content: "?";
 }
 
 .left-bot button:hover::after, .j-left-bot button:hover::after {
     width: 250px;
     height: auto;
+    font-size: 25px;
 }
 
 .left-bot button:hover::after {
-    font-size: 25px;
     animation: links 500ms infinite;
     content: "Bagel?";
 }
 
 .j-left-bot button:hover::after {
-    font-size: 25px;
     animation: none;
-    text-shadow: none;
     content: "Be Kind";
 }
 
@@ -281,7 +273,7 @@ see if can remove excess top space from jobu bottom-header
     transition-duration: 2s;
 }
 
-.j_container .hole1 {
+.hole1 {
     border: 3px solid #000000;
 }
 
@@ -291,11 +283,9 @@ see if can remove excess top space from jobu bottom-header
 
 
 .container img:hover {
-    width: 100%;
     height: 200px;
     border: 5px solid green;
 }
-
 
 .bagels {
     position: relative;
@@ -316,10 +306,6 @@ see if can remove excess top space from jobu bottom-header
     opacity: 0%;
     transition-duration: 2s;
     color: #231F20;
-}
-
-
-.bagels .hole2 {
     width: 75px;
     height: 75px;
     border: 1.5px solid #231F20;
@@ -329,7 +315,8 @@ see if can remove excess top space from jobu bottom-header
     width: 90px;
     height: 90px;
     opacity: 100%;
-    top: 50px;    
+    top: 50px;  
+    left: 58px;  
     justify-content: center;
     align-items: center;
 }
@@ -356,7 +343,6 @@ see if can remove excess top space from jobu bottom-header
 }
 
 .testimonial, .j_testimonial {
-    display: flex;
     background-size: 100%;
     justify-content: center;
     align-items: center;
